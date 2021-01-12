@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"fmt"
 	"github.com/kardianos/service"
+//	"github.com/streadway/amqp"
 )
 
 var logger service.Logger
@@ -19,6 +20,17 @@ func (p *program) Start(s service.Service) error {
 }
 
 func (p *program) run() {
+	fmt.Println("Go RabbitMQ Tutorial")
+	
+	//conn, err := amqp.Dial("amqp://reconness:reconness@rabbitmq:5672/")
+	//if err != nil {
+	//	fmt.Println(err)
+	//	panic(1)
+	//}
+	//defer conn.Close()
+	
+	fmt.Println("Successfully Connected to our RabbitMQ Instance")
+	
 	// Do work here
 	// infinite print loop
         for {
